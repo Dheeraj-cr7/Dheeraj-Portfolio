@@ -1,6 +1,7 @@
 import GlareHover from '../assets/GlareHover'
 import Magnet from '../assets/Magnet'
 import profileImg from '../assets/f3.jpeg'
+import { Link } from 'react-router-dom'
 import resume from '../assets/resume/Dheeraj_Madhwani_8-2025.pdf'
 
 // ✅ Social SVGs inline (so they scale uniformly)
@@ -101,9 +102,11 @@ const Home = () => {
             transitionDuration={800}
             playOnce={false}
           >
-            <button className="px-5 py-2 rounded-lg font-bold font-roboto shadow-md transition dark:text-white ">
-            Get in Touch
-            </button>
+            <Link to='/contact'>
+              <button className="px-5 py-3 rounded-lg font-bold font-roboto shadow-md transition dark:text-white ">
+                Get in touch
+              </button>
+            </Link>
           </GlareHover>
         </div>
       </div>

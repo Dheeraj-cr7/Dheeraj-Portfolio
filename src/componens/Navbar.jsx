@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className="font-bold relative transition-all duration-700 top-[25px] z-10 max-w-[65vw] m-auto">
+    <div className="font-bold relative transition-all duration-700 text-3xl top-[25px] z-10 max-w-[65vw] m-auto">
       <nav className="flex items-center justify-between max-w-[65vw] m-auto 
                 rounded-2xl px-4 py-2
                 text-black dark:text-white transition-colors duration-300">

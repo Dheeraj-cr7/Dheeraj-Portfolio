@@ -4,15 +4,15 @@ export default function ThemeBtn() {
   const { themeMode, darkTheme, lightTheme } = useThemeContext();
 
   const themeToggle = () => {
-    themeMode === "light" ? darkTheme() : lightTheme();
+    themeMode === "dark" ? lightTheme() : darkTheme();
   };
 
   return (
     <div
       id="themeBtn"
       onClick={themeToggle}
-      className="h-[100px] w-[100px] fixed right-[20px] top-[20px] z-40 
-                 flex items-center justify-center cursor-pointer text-4xl 
+      className=" fixed right-[20px] top-[25px] z-40 p-3
+                 flex items-center justify-center cursor-pointer 
                  bg-gray-300 dark:bg-gray-700 rounded-full"
     >
       {themeMode === "light" ? "🌞" : "🌙"}
