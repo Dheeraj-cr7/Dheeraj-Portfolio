@@ -6,7 +6,7 @@ console.log(currAge)
 const About = () => {
   return (
     <div className='bg-white/10 dark:bg-gray-900/70 dark:text-white rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] 
-      transition-all duration-500 flex flex-col items-center justify-center gap-3 p-10 w-full text-xl text-left'>
+      transition-all duration-300 flex flex-col items-center justify-center gap-3 p-10 w-full text-xl text-left'>
       <p>
         Hey there! I’m Dheeraj Madhwani, a 21-year-old Full Stack Developer who loves building things that actually make sense (and occasionally, things that just look cool).
       </p>

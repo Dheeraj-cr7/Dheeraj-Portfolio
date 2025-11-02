@@ -25,10 +25,10 @@ const Contact = () => {
 
   return (
     <div
-      className={`flex  items-center justify-center min-h-[20vh] py-2 w-full transition-colors duration-300 bg-[#ddddf7] dark:bg-gray-400 dark:text-white`}
+      className={`flex items-center mb-10 justify-center min-h-[20vh] py-2 w-full bg-[#ddddf7] dark:bg-black dark:text-white`}
     >
       <div
-        className={`w-full max-w-md border border-gray-700 rounded-2xl shadow-xl py-8 px-16 transition-all duration-200 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] bg-[#E0E0F8] dark:bg-gray-900/70 `}
+        className={`w-full max-w-md border border-gray-700 rounded-2xl shadow-xl py-8 px-16 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] bg-[#E0E0F8] dark:bg-gray-900/70 `}
       >
         <h2 className="text-3xl font-bold text-center mb-6">Get in Touch</h2>
 
