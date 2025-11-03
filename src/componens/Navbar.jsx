@@ -1,75 +1,55 @@
 import Magnet from '../assets/Magnet'
 import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react'
 
+const Navbar = ({ toggleTheme }) => {
+  const [isOpen, setIsOpen] = useState(false)
 
-const Navbar = () => {
   return (
-    <div className="font-bold relative transition-all duration-300 text-3xl px-9 top-[25px] z-10  max-w-[80vw] m-auto ">
-      <nav className="flex items-center justify-between max-w-[65vw] m-auto 
-                rounded-3xl px-4 py-2
-                text-black dark:text-white transition-colors duration-100
-                border border-solid border-black dark:border-white">
-        
-        {/* Left - Logo */}
-        <div id="start-cont" 
-             className="rounded-full p-2 cursor-pointer transition-all duration-200">
-          <Link to="/">DM</Link>
-        </div>
-      
-        {/* Middle - Nav Links */}
-        <div id="middle-cont" 
-             className="flex gap-6 items-center justify-center transition-all duration-200">
-          <Magnet padding={3} disabled={false} magnetStrength={2}>
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
-                `px-4 text-[14px] p-1 rounded-2xl transition-all 
-                  ${isActive ? "bg-gray-800 text-white" : "hover:bg-gray-800 hover:text-white"}`
-              }>
-              HOME
-            </NavLink>
-          </Magnet>
-          <Magnet padding={3} disabled={false} magnetStrength={2}>
-            <NavLink 
-              to="/about" 
-              className={({ isActive }) => 
-                `px-4 text-[14px] p-1 rounded-2xl transition-all 
-                ${isActive ? "bg-gray-800 text-white" : "hover:bg-gray-800 hover:text-white"}`
-              }>
-              ABOUT
-            </NavLink>
-          </Magnet>
-          <Magnet padding={3} disabled={false} magnetStrength={2}>
-            <NavLink 
-              to="/projects" 
-              className={({ isActive }) => 
-                `px-4 text-[14px] p-1 rounded-2xl transition-all 
-                ${isActive ? "bg-gray-800 text-white" : "hover:bg-gray-800 hover:text-white"}`
-              }>
-              PROJECTS
-            </NavLink>
-          </Magnet>
-          <Magnet padding={3} disabled={false} magnetStrength={2}>
-            <NavLink 
-              to="/contact" 
-              className={({ isActive }) => 
-                `px-4 text-[14px] p-1 rounded-2xl transition-all 
-                ${isActive ? "bg-gray-700 text-white" : "hover:bg-gray-700 hover:text-white"}`
-              }>
-              CONTACT
-            </NavLink>
-          </Magnet>
-              
+    <div className="font-bold sticky top-5 z-10 px-3 sm:px-6">
+      <nav className="flex items-center justify-between flex-wrap backdrop-blur-md rounded-2xl px-3 sm:px-6 py-1 sm:py-2 text-black dark:text-white transition-colors duration-100 border border-solid border-black dark:border-white max-w-4xl mx-auto">
 
-
-
+        {/* Logo */}
+        <div id="start-cont" className="rounded-full p-1 sm:p-2 cursor-pointer transition-all duration-200">
+          <Link to="/" className="text-lg sm:text-xl md:text-2xl">DM</Link>
         </div>
 
-        {/* Right - Button */}
-        <div id="end-cont" className="transition-all duration-200">
+        {/* Hamburger for mobile */}
+        <div className="sm:hidden">
+          <button className="text-2xl" onClick={() => setIsOpen(!isOpen)}>☰</button>
+        </div>
+
+        {/* Nav Links */}
+        <div className={`w-full sm:flex sm:items-center sm:w-auto ${isOpen ? "block" : "hidden"} mt-2 sm:mt-0`}>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center">
+            {["/", "/about", "/projects", "/contact"].map((path, i) => (
+              <Magnet key={i} padding={2} disabled={false} magnetStrength={1.5}>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    `px-3 py-1 text-[13px] sm:text-[14px] rounded-xl transition-all ${isActive ? "bg-gray-800 text-white" : "hover:bg-gray-800 hover:text-white"
+                    }`
+                  }
+                >
+                  {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
+                </NavLink>
+              </Magnet>
+            ))}
+
+            {/* Theme toggle inside mobile menu only */}
+            <button
+              onClick={toggleTheme}
+              className="mt-2 py-1 px-3 rounded-xl bg-gray-200 dark:bg-gray-700 text-black dark:text-white text-[13px] sm:hidden"
+            >
+              🌙 / ☀️
+            </button>
+          </div>
+        </div>
+
+        {/* Right button for desktop */}
+        <div id="end-cont" className="hidden sm:block transition-all duration-200">
           <Link to="/contact">
-            <button 
-              className="py-1 px-3 hover:bg-gray-700 hover:text-white rounded-2xl text-[14px] transition-all">
+            <button className="py-1 px-2 sm:py-1 sm:px-3 hover:bg-gray-700 hover:text-white rounded-xl text-[13px] sm:text-[14px] transition-all">
               Let’s Connect 👋
             </button>
           </Link>
@@ -79,4 +59,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

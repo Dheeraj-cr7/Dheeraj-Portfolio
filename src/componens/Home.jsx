@@ -1,66 +1,16 @@
+import React from 'react';
 import GlareHover from '../assets/GlareHover'
 import Magnet from '../assets/Magnet'
 import profileImg from '../assets/f3.jpeg'
+import LogoLoop from '../assets/LogoLoop'
 import { Link } from 'react-router-dom'
 import resume from '../assets/resume/DheerajMadhwani_10_Resume.pdf'
 import Contact from './Contact'
 import Project from './Project'
-import LogoLoop from '../assets/LogoLoop'
-// import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiPostgresql } from "react-icons/si";
-// import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiPython, SiCplusplus, SiGit, SiGithub, } from "react-icons/si";
-// import { SiHtml5, SiCss3, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiPython, SiCplusplus, SiMongodb, SiPostgresql, SiNextdotjs, SiExpo, SiGit, SiGithub, SiSupabase } from "react-icons/si";
-
-
 import About from './About'
 
-//Technologies logos
-// const techLogos = [
-//   { node: <SiHtml5 color="#E34F26" />, title: "HTML5" },
-//   { node: <SiCss3 color="#1572B6" />, title: "CSS3" },
-//   { node: <SiTailwindcss color="#38BDF8" />, title: "Tailwind CSS" },
-//   { node: <SiJavascript color="#F7DF1E" />, title: "JavaScript" },
-//   { node: <SiTypescript color="#3178C6" />, title: "TypeScript" },
-//   { node: <SiReact color="#61DAFB" />, title: "React" },
-//   { node: <SiNodedotjs color="#339933" />, title: "Node.js" },
-//   { node: <SiPython color="#3776AB" />, title: "Python" },
-//   { node: <SiCplusplus color="#00599C" />, title: "C++" },
-//   { node: <SiMongodb color="#47A248" />, title: "MongoDB" },
-//   { node: <SiPostgresql color="#336791" />, title: "PostgreSQL" },
-//   { node: <SiNextdotjs color="#000000" />, title: "Next.js" },
-//   { node: <SiReact color="#61DAFB" />, title: "React Native" }, // React Native uses React logo
-//   { node: <SiExpo color="#000020" />, title: "Expo" },
-//   { node: <SiGit color="#F05032" />, title: "Git" },
-//   { node: <SiGithub color="#181717" />, title: "GitHub" },
-//   { node: <SiSupabase color="#3ECF8E" />, title: "Supabase" } // official green color
-// ];
 
-
-// const techLogos = [
-//   { node: <SiReact />, title: "React", href: "https://react.dev" },
-//   { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-//   { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-//   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-//   { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
-//   { node: <SiMongodb />, title: "MongoDB", href: "https://mongodb.com" },
-//   { node: <SiPostgresql />, title: "PostgreSQL", href: "https://postgresql.org" },
-// ];
-// const techLogos = [
-//   { icon: <SiHtml5 color="#E34F26" />, name: "HTML5" },
-//   { icon: <SiCss3 color="#1572B6" />, name: "CSS3" },
-//   { icon: <SiJavascript color="#F7DF1E" />, name: "JavaScript" },
-//   { icon: <SiReact color="#61DAFB" />, name: "React" },
-//   { icon: <SiTailwindcss color="#38BDF8" />, name: "Tailwind CSS" },
-//   { icon: <SiNodedotjs color="#68A063" />, name: "Node.js" },
-//   { icon: <SiExpress color="#FFFFFF" />, name: "Express.js" },
-//   { icon: <SiPostgresql color="#336791" />, name: "PostgreSQL" },
-//   { icon: <SiMongodb color="#4DB33D" />, name: "MongoDB" },
-//   { icon: <SiPython color="#3776AB" />, name: "Python" },
-//   { icon: <SiCplusplus color="#00599C" />, name: "C++" },
-//   { icon: <SiGit color="#F05032" />, name: "Git" },
-//   { icon: <SiGithub color="#181717" />, name: "GitHub" },
-// ];
-
-// Social Icons
+// Social Icons (kept for completeness)
 const GithubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24" fill="currentColor"
@@ -93,114 +43,109 @@ const LocationIcon = () => (
 const Home = () => {
   return (
     <>
-      <div className="flex items-center gap-10 justify-stretch m-auto max-w-[70vw] min-h-[90vh] px-4 md:px-10 ">
-        {/* Info Card */}
-        <div
-          id='card'
-          className="relative bg-white/10 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)]
-          hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300 flex flex-col items-center p-8 py-9 w-full max-w-sm text-center"
-        >
-
-          {/* Profile Image */}
-          <img
-            src={profileImg}
-            alt="Profile"
-            className="h-40 w-40 rounded-full border border-white/20 shadow-lg object-cover object-center transition-transform duration-300 hover:scale-105"
-          />
-
-          {/* Name + Role */}
-          <div className="mt-5 space-y-1">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dheeraj Madhwani</h1>
-            <p className="text-gray-900 dark:text-gray-400 text-lg">Full Stack Developer</p>
-            <p className="flex items-center justify-center gap-2 text-gray-900 dark:text-gray-400 mt-1">
-              <LocationIcon /> Nagpur, India
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex gap-6 mt-5">
-            <a href="https://github.com/Dheeraj-cr7" target="_blank" rel="noreferrer"
-              className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-              <GithubIcon />
-            </a>
-            <a href="https://linkedin.com/in/dheerajmadhwani" target="_blank" rel="noreferrer"
-              className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-              <LinkedinIcon />
-            </a>
-            <a href="https://instagram.com/dheeraj_madhwani30" target="_blank" rel="noreferrer"
-              className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-              <InstagramIcon />
-            </a>
-          </div>
-
-          {/* Description + Resume */}
-          <div className="mt-6 text-center text-gray-800 dark:text-gray-200 space-y-4">
-            <p className="text-lg leading-snug">Crafting modern, scalable and optimized applications.</p>
-
-            <a download="Dheeraj_Madhwani_Resume" href={resume}>
-              <Magnet padding={20} magnetStrength={5}>
-                <button className="px-5 py-2 mt-5 bg-gray-700 
-                  rounded-lg font-semibold text-white shadow-md hover:scale-105 transition">
-                  Download Resume
-                </button>
-              </Magnet>
-            </a>
-          </div>
-
-          {/* Contact Button */}
-          {/* <div className="mt-6">
-            <p className="font-semibold text-lg dark:text-white">Want to work together?</p>
-            <GlareHover glareColor="#2196F3" glareOpacity={0.3} glareAngle={-30} glareSize={200}>
-              <Link to='/contact'>
-                <button className="px-5 py-2 mt-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-gray-800 shadow-md hover:scale-105 transition">
-                  Get in Touch
-                </button>
-              </Link>
-            </GlareHover>
-          </div> */}
-          <div className="mt-6 text-center">
-            <p className="font-semibold mb-3 text-lg dark:text-white">Want to work together?</p>
-            <GlareHover
-              glareColor="#2196F3"
-              glareOpacity={0.5}
-              glareAngle={-45}
-              glareSize={200}
-              transitionDuration={250}
-              playOnce={false}
+      {/* MODIFIED: Increased pt-16 to pt-24 to correctly offset ALL content below the fixed Navbar. */}
+      <div className="pt-24 pb-10 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto font-roboto">
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10'>
+          <div className="lg:col-span-1 flex justify-center w-full">
+            <div
+              id='card'
+              className="relative bg-white/10 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)]
+                hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300 flex flex-col items-center px-8 py-9 w-full max-w-sm text-center"
             >
-              <div className="inline-block">
-                <Link to="/contact">
-                  <button className="px-5 py-2 rounded-lg font-semibold text-white bg-gray-700">
-                    Get in Touch
-                  </button>
-                </Link>
+
+              {/* Profile Image */}
+              <img
+                src={profileImg}
+                alt="Profile"
+                className="h-36 w-36 sm:h-40 sm:w-40 rounded-full border border-white/20 shadow-lg object-cover object-center transition-transform duration-300 hover:scale-105"
+              />
+
+              {/* Name + Role */}
+              <div className="mt-5 space-y-1">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Dheeraj Madhwani</h1>
+                <p className="text-gray-900 dark:text-gray-400 text-base sm:text-lg">Full Stack Developer</p>
+                <p className="flex items-center justify-center gap-2 text-gray-900 dark:text-gray-400 mt-1 text-sm sm:text-base">
+                  <LocationIcon /> Nagpur, India
+                </p>
               </div>
-            </GlareHover>
+
+              {/* Social Links */}
+              <div className="flex gap-6 mt-5">
+                <a href="https://github.com/Dheeraj-cr7" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition"
+                  aria-label="GitHub Profile">
+                  <GithubIcon />
+                </a>
+                <a href="https://linkedin.com/in/dheerajmadhwani" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition"
+                  aria-label="LinkedIn Profile">
+                  <LinkedinIcon />
+                </a>
+                <a href="https://instagram.com/dheeraj_madhwani30" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition"
+                  aria-label="Instagram Profile">
+                  <InstagramIcon />
+                </a>
+              </div>
+
+              {/* Description + Resume */}
+              <div className="mt-6 text-center text-gray-800 dark:text-gray-200 space-y-4">
+                <p className="text-base sm:text-lg leading-snug">Crafting modern, scalable and optimized applications.</p>
+
+                <a download="Dheeraj_Madhwani_Resume" href={resume}>
+                  <Magnet padding={20} magnetStrength={5}>
+                    <button className="px-5 py-2 mt-5 bg-gray-700 
+                      rounded-lg font-semibold text-white shadow-md hover:scale-105 transition">
+                      Download Resume
+                    </button>
+                  </Magnet>
+                </a>
+              </div>
+
+              {/* Contact Button */}
+              <div className="mt-6 text-center">
+                <p className="font-semibold mb-3 text-lg dark:text-white">Want to work together?</p>
+                <GlareHover
+                  glareColor="#2196F3"
+                  glareOpacity={0.5}
+                  glareAngle={-45}
+                  glareSize={200}
+                  transitionDuration={250}
+                  playOnce={false}
+                >
+                  <div className="inline-block">
+                    <Link to="/contact">
+                      <button className="px-5 py-2 rounded-lg font-semibold text-white bg-gray-700 hover:bg-gray-600 transition">
+                        Get in Touch
+                      </button>
+                    </Link>
+                  </div>
+                </GlareHover>
+              </div>
+            </div>
           </div>
 
-
+          {/* Column 2: Right Data Section (About) */}
+          <div className='lg:col-span-2 w-full'>
+            <div className='bg-white/10 dark:bg-gray-900/70 dark:text-white backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] 
+              transition-all duration-300 flex flex-col items-start h-full justify-center gap-3 p-8 sm:p-10 w-full text-xl text-left'>
+              <About />
+            </div>
+          </div>
         </div>
-
-        {/* Right Data Section (keep or replace later) */}
-        <div>
-          <About />
-        </div>
-
-
       </div>
-      <div>
+
+      {/* Other Sections: Full width for design consistency (like the LogoLoop) */}
+      <div className='w-full'>
         <section
           id="technologies"
-          className="mt-4 mb-3 py-10 bg-[#ddddf7] dark:bg-black rounded-3xl flex flex-col justify-center"
+          className="mt-4 mb-3 py-10 bg-[#ddddf7] dark:bg-black rounded-none md:rounded-3xl flex flex-col justify-center"
         >
-          <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-10 underline underline-offset-4 transition-all duration-300">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white mb-10 underline underline-offset-4 transition-all duration-300">
             Technologies
           </h2>
-
           <LogoLoop />
         </section>
-
-
 
         <Project />
         <Contact />

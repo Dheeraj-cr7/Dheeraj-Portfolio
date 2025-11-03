@@ -24,10 +24,10 @@ const PortfolioFooter = () => {
       <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5a5.5 5.5 0 1 0 0 11.001 5.5 5.5 0 0 0 0-11.001zm0 2a3.5 3.5 0 1 1 0 7.001 3.5 3.5 0 0 1 0-7.001zM17.5 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
     </svg>
   )
-
+  const date = new Date()
   return (
     // Main container with dark background
-    <footer className="w-full bg-gray-900 text-white pt-16 pb-6 shadow-2xl">
+    <footer className="w-full bg-gray-900 relative bottom-0 z-10 text-white pt-16 pb-6 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top Section: Branding, Links, and Social */}
@@ -79,7 +79,7 @@ const PortfolioFooter = () => {
         {/* Bottom Bar: Copyright */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-gray-500 text-xs">
           {/* Copyright text aligned to the left */}
-          <p className="order-2 md:order-1 mt-4 md:mt-0">© 2025 Dheeraj. All rights reserved.</p>
+          <p className="order-2 md:order-1 mt-4 md:mt-0">© {date.getFullYear()} Dheeraj. All rights reserved.</p>
 
           {/* Placeholder for the "Activate Windows" text (removed for clarity, replaced with a small branding link) */}
           <p className="order-1 md:order-2 text-gray-700 hover:text-gray-500 transition-colors">

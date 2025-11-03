@@ -12,6 +12,7 @@ const App = () => {
 
   const darkTheme = () => setThemeMode("dark");
   const lightTheme = () => setThemeMode("light");
+  const toggleTheme = () => setThemeMode(prev => prev === "dark" ? "light" : "dark");
 
   useEffect(() => {
     const mode = JSON.parse(localStorage.getItem("mode"))
@@ -19,6 +20,7 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    if (!themeMode) return
     const html = document.querySelector("html");
     html.classList.remove("light", "dark");
     html.classList.add(themeMode);
@@ -26,17 +28,14 @@ const App = () => {
   }, [themeMode]);
 
   return (
-    <>
-      <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
-        {/* Context Provider must wrap children */}
-          <ThemeBtn />
-          <div className='bg-[#ddddf7] dark:bg-black w-full h-full'>
-            <Navbar />
-            <Outlet />
-            <Footer />
-          </div>
-      </ThemeProvider>
-    </>
+    <ThemeProvider value={{ themeMode, darkTheme, lightTheme, toggleTheme }}>
+      <ThemeBtn />
+      <div className='bg-[#ddddf7] dark:bg-black w-full h-full font-archivo'>
+        <Navbar toggleTheme={toggleTheme} />
+        <Outlet />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

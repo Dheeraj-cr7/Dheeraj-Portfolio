@@ -11,11 +11,11 @@ export default function ThemeBtn() {
     <div
       id="themeBtn"
       onClick={themeToggle}
-      className=" fixed right-[20px] top-[25px] z-40 p-3
-                 flex items-center justify-center cursor-pointer 
+      className="hidden sm:flex fixed right-5 top-6 z-50 p-3
+                 items-center justify-center cursor-pointer 
                  bg-gray-300 dark:bg-gray-700 rounded-full"
     >
-      {themeMode === "light" ? "🌞" : "🌙"}
+      {themeMode === "light" || themeMode === null ? "🌞" : "🌙"}
     </div>
   );
 }
