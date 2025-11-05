@@ -1,6 +1,7 @@
 import Navbar from './componens/Navbar'
 import Footer from './componens/Footer'
 import { useEffect, useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 import { Outlet } from 'react-router-dom'
 
 // theme
@@ -30,6 +31,16 @@ const App = () => {
   return (
     <ThemeProvider value={{ themeMode, darkTheme, lightTheme, toggleTheme }}>
       <ThemeBtn />
+      <Toaster
+        toastOptions={{
+          style: {
+            borderRadius: "8px",
+            background: themeMode === "dark" ? "#1a1a1a" : "#fff",
+            color: themeMode === "dark" ? "#fff" : "#333",
+          },
+        }}
+      />
+
       <div className='bg-[#ddddf7] dark:bg-black w-full h-full font-archivo'>
         <Navbar toggleTheme={toggleTheme} />
         <Outlet />
