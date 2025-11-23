@@ -8,7 +8,7 @@ import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
 import Contact from './Components/Contact.jsx'
 import Project from './Components/Project.jsx'
-import FarmAppDetails from './Components/farmAppDetails.jsx'
+import FarmAppDetails from './Components/FarmAppDetails.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
