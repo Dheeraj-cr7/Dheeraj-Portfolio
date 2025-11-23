@@ -4,11 +4,11 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter } from 'react-router-dom'
 import { createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-import Home from './componens/Home.jsx'
-import About from './componens/About.jsx'
-import Contact from './componens/Contact.jsx'
-import Project from './componens/Project.jsx'
-import FarmAppDetails from './componens/farmAppDetails.jsx'
+import Home from './Components/Home.jsx'
+import About from './Components/About.jsx'
+import Contact from './Components/Contact.jsx'
+import Project from './Components/Project.jsx'
+import FarmAppDetails from './Components/farmAppDetails.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

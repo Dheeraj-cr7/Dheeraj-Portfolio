@@ -1,12 +1,12 @@
-import Navbar from './componens/Navbar'
-import Footer from './componens/Footer'
+import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 import { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { Outlet } from 'react-router-dom'
 
 // theme
 import { ThemeProvider } from './assets/theme'
-import ThemeBtn from './componens/ThemeBtn'
+import ThemeBtn from './Components/ThemeBtn'
 
 const App = () => {
   const [themeMode, setThemeMode] = useState(null);
