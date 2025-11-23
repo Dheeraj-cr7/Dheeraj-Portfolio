@@ -21,7 +21,7 @@ const About = () => {
             I’m pursuing my B.Tech in Computer Science (IoT) at <b>G.H. Raisoni College of Engineering, Nagpur</b>, where I’ve spent the last few years turning caffeine and code into smart systems — from IoT-based energy monitoring projects to full-stack web apps that run smoother than my Wi-Fi on a good day.
           </p>
           <p>
-            I speak fluent <b className="underline">React</b>, <b className="underline">Node.js</b>, <b className="underline">PostgreSQL</b>, and <b className="underline">Tailwind CSS</b>, and I enjoy connecting the dots between frontend aesthetics and backend logic — bridging “it looks good” with “it actually works.”
+            I speak fluent <b className="underline">React</b>, <b className="underline">Node.js</b>, <b className="underline">PostgreSQL</b> and <b className="underline">Tailwind CSS</b>, and I enjoy connecting the dots between frontend aesthetics and backend logic — bridging “it looks good” with “it actually works.”
           </p>
           <p>
             I believe tech should solve real problems, not just exist for the buzzwords. That’s why I keep experimenting, learning, and occasionally breaking things (for innovation, of course).

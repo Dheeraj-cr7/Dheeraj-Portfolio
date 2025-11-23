@@ -50,7 +50,7 @@ const Home = () => {
             <div
               id='card'
               className="relative bg-white/10 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)]
-                hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300 flex flex-col items-center px-8 py-9 w-full max-w-sm text-center"
+              hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300 flex flex-col items-center px-8 py-9 w-full max-w-sm text-center"
             >
 
               {/* Profile Image */}
@@ -94,8 +94,7 @@ const Home = () => {
 
                 <a download="Dheeraj_Madhwani_Resume" href={resume}>
                   <Magnet padding={20} magnetStrength={5}>
-                    <button className="px-5 py-2 mt-5 bg-gray-700 
-                      rounded-lg font-semibold text-white shadow-md hover:scale-105 transition">
+                    <button className="px-5 py-2 mt-5 bg-gray-700 rounded-lg font-semibold text-white shadow-md hover:scale-105 transition">
                       Download Resume
                     </button>
                   </Magnet>
@@ -127,8 +126,7 @@ const Home = () => {
 
           {/* Column 2: Right Data Section (About) */}
           <div className='lg:col-span-2 w-full'>
-            <div className='bg-white/10 dark:bg-gray-900/70 dark:text-white backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] 
-              transition-all duration-300 flex flex-col items-start h-full justify-center gap-3 p-8 sm:p-10 w-full text-xl text-left'>
+            <div className='bg-white/10 dark:bg-gray-900/70 dark:text-white backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-300 flex flex-col items-start h-full justify-center gap-3 p-8 sm:p-10 w-full text-xl text-left'>
               <About />
             </div>
           </div>
