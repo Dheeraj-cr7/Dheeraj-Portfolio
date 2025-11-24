@@ -18,8 +18,8 @@ const router = createBrowserRouter(
         <Route path='about' element={<About />} />
         <Route path='projects' element={<Project />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='projects/farm-app-details' element = {<FarmAppDetails />} />
       </Route>
-      <Route path='/projects/farm-app-details' element = {<FarmAppDetails />} />
     </>
   )
 )

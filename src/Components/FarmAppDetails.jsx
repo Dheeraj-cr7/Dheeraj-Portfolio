@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import Footer from './Footer'
 import { Leaf, Cpu, BarChart3, Sun, Moon, Zap, ShieldCheck, Home, Folder, Mail, ArrowRight, Github, Linkedin, ArrowDown } from 'lucide-react';
 // Import images
 import img1 from "../assets/farmAppImgs/1.png";
@@ -34,7 +35,7 @@ const ResponsiveFlowchart = ({ screens }) => {
 
       {/* 1. Flowchart Steps Container */}
       {/* Mobile: Horizontal, flex-wrap. MD+: Vertical, space-y-4 */}
-      <div className="w-full md:w-2/3 flex flex-wrap md:flex-col items-center border-r-2 border-teal-400/50 justify-center md:items-start space-x-2 md:space-x-0 space-y-2 md:space-y-4 p-2 md:p-8 order-2 md:order-1">
+      <div className="w-full md:w-2/3 flex flex-wrap md:flex-col items-center border-t-2 border-r-0 sm:border-r-2 sm:border-t-0 border-teal-400/50 justify-center md:items-start space-x-2 md:space-x-0 space-y-2 md:space-y-4 p-2 md:p-8 order-2 md:order-1">
 
         {/* Title for Tablet/Desktop Screens */}
         {/* <h4 className="hidden md:block text-xl font-bold dark:text-white mb-4 border-b border-teal-400/50 w-full pb-1">App Flow Steps</h4>
@@ -44,7 +45,7 @@ const ResponsiveFlowchart = ({ screens }) => {
             <div
               className={`flex items-center justify-center p-3 rounded-lg cursor-pointer transition-all duration-300 text-left w-auto min-w-min 
                 ${activeScreen.id === s.id
-                  ? 'bg-teal-600/70 text-white dark:text-white shadow-lg border border-teal-500'
+                  ? 'bg-teal-600/70 dark:bg-gray-600 text-white dark:text-white shadow-lg border border-teal-500'
                   : 'bg-slate-700/50 text-gray-900 dark:text-gray-500 hover:bg-slate-600/70 border border-slate-700'
                 }
                 md:w-full /* Steps take full width in vertical layout (MD+) */
@@ -58,12 +59,12 @@ const ResponsiveFlowchart = ({ screens }) => {
             </div>
             {/* Separator Logic: ArrowRight for horizontal (Mobile), ArrowDown for vertical (MD+) */}
             {i < screens.length - 1 && (
-              <>
+              <div className='flex justify-center items-center'>
                 {/* Horizontal Separator (Mobile) - Used for flex-wrap separation */}
                 <ArrowRight className="w-4 h-4 text-slate-600 block md:hidden" />
                 {/* Vertical Separator (Tablet/Desktop) */}
                 <ArrowDown className="w-5 h-5 text-center text-slate-600 hidden md:block ml-3" />
-              </>
+              </div>
             )}
           </React.Fragment>
         ))}
@@ -71,7 +72,7 @@ const ResponsiveFlowchart = ({ screens }) => {
 
       {/* 2. Screen Image Preview (Centered on all devices) */}
       <div className="w-full md:w-1/3 flex items-center justify-center p-4 order-1 md:order-2 mb-6 md:mb-0">
-        <div className="w-full max-w-sm h-72 md:h-[36rem] lg:h-[40rem] p-4 rounded-lg flex items-center justify-center relative overflow-hidden bg-slate-900/50 border border-slate-800">
+        <div className="w-full max-w-sm h-72 md:h-[36rem] lg:h-[40rem] p-4 rounded-lg flex items-center justify-center relative overflow-hidden bg-transparent border border-slate-800">
           {/* <div className="absolute top-2 left-2 right-2 p-2 bg-black/50 text-white text-center rounded-t-lg text-sm font-mono z-10">
             {activeScreen.id}. {activeScreen.workflowTitle}: {activeScreen.label}
           </div> */}
@@ -117,7 +118,7 @@ export default function FarmAppDetails() {
   const sectionTitleStyle = 'text-3xl md:text-4xl font-extrabold mb-6 border-b-2 border-teal-400/50 pb-2 inline-block';
 
   return (
-    <div className={`min-h-screen font-roboto transition-colors duration-500 bg-[#ddddf7] text-black dark:bg-gray-900/70 dark:text-white`}>
+    <div className={`min-h-screen font-roboto transition-colors duration-500 bg-[#ddddf7] text-black dark:bg-black dark:text-white`}>
 
       {/* Main Content Container */}
       <div className="max-w-6xl mx-auto p-4 sm:p-8">
@@ -194,48 +195,7 @@ export default function FarmAppDetails() {
       </div>
 
       {/* 5. Footer (Minimalist Dark Style) */}
-      <footer id="contact" className="bg-slate-950 border-t border-slate-800 pt-10 pb-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-900">
-
-          {/* About Section */}
-          <div>
-            <h4 className="text-xl font-bold text-white mb-4">Dheeraj Madhwani</h4>
-            <p className="text-sm">
-              Building seamless web and mobile experiences as a Full-Stack Developer.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="hover:text-teal-400 transition-colors">Home</a></li>
-              <li><a href="#projects" className="hover:text-teal-400 transition-colors">Projects</a></li>
-              <li><a href="#contact" className="hover:text-teal-400 transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex flex-col items-start md:items-end">
-            <h4 className="text-xl font-bold text-white mb-4">Connect</h4>
-            <div className="flex space-x-4">
-              <a href="#" aria-label="GitHub" className="hover:text-teal-400 transition-colors">
-                <Github size={24} />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-teal-400 transition-colors">
-                <Linkedin size={24} />
-              </a>
-              <a href="#" aria-label="Mail" className="hover:text-teal-400 transition-colors">
-                <Mail size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="text-center text-xs text-slate-600 mt-8">
-          &copy; {new Date().getFullYear()} Dheeraj Madhwani. All rights reserved.
-        </div>
-      </footer>
-
+      {/* <Footer /> */}
     </div>
   );
 }

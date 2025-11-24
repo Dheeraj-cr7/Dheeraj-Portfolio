@@ -1,9 +1,9 @@
 import Navbar from './Components/Navbar'
-import Footer from './Components/Footer'
 import { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { Outlet } from 'react-router-dom'
-
+import Footer from './Components/Footer'
+import ScrollToTop from './assets/ScrollToTop'
 // theme
 import { ThemeProvider } from './assets/theme'
 import ThemeBtn from './Components/ThemeBtn'
@@ -43,6 +43,7 @@ const App = () => {
 
       <div className='bg-[#ddddf7] dark:bg-black w-full h-full font-archivo'>
         <Navbar toggleTheme={toggleTheme} />
+        <ScrollToTop />
         <Outlet />
         <Footer />
       </div>

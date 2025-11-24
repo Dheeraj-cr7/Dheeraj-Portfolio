@@ -143,10 +143,12 @@ const Home = () => {
           </h2>
           <LogoLoop />
         </section>
-
-        <Project />
+        <div className='flex flex-col justify-center items-center'>
+          <h2 className="text-3xl sm:text-4xl font-bold underline mb-2 dark:text-white">Projects</h2>
+          <Project />
+        </div>
         <Contact />
-      </div>
+      </div>  
     </>
   )
 }
