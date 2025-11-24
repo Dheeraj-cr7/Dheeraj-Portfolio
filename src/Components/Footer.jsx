@@ -58,20 +58,24 @@ const PortfolioFooter = () => {
           </div>
 
           {/* Column 4: Social Icons */}
-          <div className="col-span-1 flex justify-start md:justify-end items-start">
-            <div className="flex space-x-6">
-              <a href="https://github.com/Dheeraj-cr7" target="_blank" rel="noreferrer"
-                className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-                <GithubIcon />
-              </a>
-              <a href="https://linkedin.com/in/dheerajmadhwani" target="_blank" rel="noreferrer"
-                className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-                <LinkedinIcon />
-              </a>
-              <a href="https://instagram.com/dheeraj_madhwani30" target="_blank" rel="noreferrer"
-                className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
-                <InstagramIcon />
-              </a>
+          <div className='col-span-1 flex flex-col items-start'>
+            <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+            <div className=" flex justify-start md:justify-end items-start">
+              <div className="flex space-x-6">
+                <a href="https://github.com/Dheeraj-cr7" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
+                  <GithubIcon />
+                </a>
+                <a href="https://linkedin.com/in/dheerajmadhwani" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
+                  <LinkedinIcon />
+                </a>
+                <a href="https://instagram.com/dheeraj_madhwani30" target="_blank" rel="noreferrer"
+                  className="hover:text-blue-500 dark:text-white dark:hover:text-blue-500 transition">
+                  <InstagramIcon />
+                </a>
+              </div>
+              <h6></h6>
             </div>
           </div>
         </div>

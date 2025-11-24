@@ -1,4 +1,3 @@
-import React from 'react';
 import GlareHover from '../assets/GlareHover'
 import Magnet from '../assets/Magnet'
 import profileImg from '../assets/f3.jpeg'

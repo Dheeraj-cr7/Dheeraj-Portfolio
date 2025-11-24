@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import img from "../assets/dot.jpg";
 import doneZo_img from "../assets/doneZo_img.png"
+import prev_img from "../assets/farmAppImgs/farmAppPreviewImage.png"
 
 
 const projects = [
-  { title: "Smart Farming Mobile App", img: img, desc: "A farmApp to get realtime updates for crop/soil productivity.", src: '/projects/farm-app-details' },
+  { title: "Smart Farming Mobile App", img: prev_img, desc: "A farmApp to get realtime updates for crop/soil productivity.", src: '/projects/farm-app-details' },
   { title: "DoneZo", img: doneZo_img, desc: "A todo webapp for tast managements.", src: 'https://done-zo-six.vercel.app/' },
 ];
 
