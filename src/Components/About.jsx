@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import {useLocation} from 'react-router-dom'
 
 const About = () => {
   const age = new Date().getFullYear() - 2004;
   const [showFull, setShowFull] = useState(false);
+
+  const location = useLocation();
+  const isStandAlonePage = location.pathname === "/about"
 
   // Short summary for mobile
   const mobileSummary = `Hey there! I’m Dheeraj Madhwani, a ${age}-year-old Full Stack Developer who loves building things that actually make sense. I’m pursuing my B.Tech in Computer Science (IoT) at G.H. Raisoni College of Engineering, Nagpur, and enjoy turning ideas into smart systems.`;
 
   return (
     // CLEAN FIX: The ID is set here with no extra padding (pt-XX)
-    <section id="about">
+    <section id="about" className={isStandAlonePage ? "pt-16 pb-10 sm:pt-12" : ""}>
       <div className="w-full max-w-4xl mx-auto px-5 sm:px-6 flex flex-col gap-4 text-gray-800 dark:text-white text-base sm:text-lg leading-relaxed text-left">
 
         {/* Desktop - full content */}

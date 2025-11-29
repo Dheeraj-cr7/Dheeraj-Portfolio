@@ -118,7 +118,7 @@ export default function FarmAppDetails() {
   const sectionTitleStyle = 'text-3xl md:text-4xl font-extrabold mb-6 border-b-2 border-teal-400/50 pb-2 inline-block';
 
   return (
-    <div className={`min-h-screen font-roboto transition-colors duration-500 bg-[#ddddf7] text-black dark:bg-black dark:text-white`}>
+    <div className={`min-h-screen font-roboto transition-color duration-100 bg-[#ddddf7] text-black dark:bg-black dark:text-white`}>
 
       {/* Main Content Container */}
       <div className="max-w-6xl mx-auto p-4 sm:p-8">
@@ -193,9 +193,6 @@ export default function FarmAppDetails() {
         </section>
 
       </div>
-
-      {/* 5. Footer (Minimalist Dark Style) */}
-      {/* <Footer /> */}
     </div>
   );
 }

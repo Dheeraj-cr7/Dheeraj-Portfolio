@@ -7,7 +7,7 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <div className="font-bold sticky top-5 z-10 px-3 sm:px-6">
-      <nav className="flex items-center justify-between flex-wrap backdrop-blur-md rounded-2xl px-3 sm:px-6 py-1 sm:py-2 text-black dark:text-white transition-colors duration-100 border border-solid border-black dark:border-white max-w-4xl mx-auto">
+      <nav className="flex items-center justify-between flex-wrap backdrop-blur-lg rounded-2xl px-3 sm:px-6 py-1 sm:py-2 text-black dark:text-white transition-colors duration-100 border border-solid border-black dark:border-white max-w-4xl mx-auto">
 
         {/* Logo */}
         <div id="start-cont" className="rounded-full p-1 sm:p-2 cursor-pointer transition-all duration-200">
